@@ -1,7 +1,9 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 function FlagItem({country}) {
   return (
+    <Link to={`/${country.index}`}>
     <div className='flag-card'>
         <img src={country.flag} alt="" />
         <div className="flag-details">
@@ -11,6 +13,7 @@ function FlagItem({country}) {
         <h4>Capital: <span>{country.capital}</span></h4>
         </div>
     </div>
+    </Link>
   )
 }
 
