@@ -1,9 +1,9 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-function FlagItem({country}) {
+function FlagItem({country,index}) {
   return (
-    <Link to={`/${country.index}`}>
+    <Link to={`/${country.name}`}>
     <div className='flag-card'>
         <img src={country.flag} alt="" />
         <div className="flag-details">

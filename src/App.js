@@ -55,7 +55,7 @@ function App() {
       
       <FlagGrid countries={countries} output={output} isLoading={isLoading}/>
       </Route>
-      <Route path='/index' component={FlagSingle} />
+      <Route path='/:name' component={FlagSingle} countries={countries} />
       </Switch>
     </div>
     </Router>

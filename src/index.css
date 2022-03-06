@@ -27,6 +27,11 @@
     padding: 10px 30px;
 }
 
+a {
+    text-decoration: none;
+    color: #333;
+}
+
 .flag-card {
     width: 250px;
     height: 340px;
