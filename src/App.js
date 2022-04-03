@@ -24,6 +24,7 @@ function App() {
       // console.log(result.data)
       setCountries(result.data)
       setIsLoading(false);
+
     };
 
     fetchCountries();
@@ -34,6 +35,9 @@ function App() {
     countries.filter(val=> {
       if(val.name.toLowerCase().includes(input.toLowerCase())){
         setOutput(output=>[...output,val])
+      }
+      return{
+        //empty return
       }
     })
 },[countries,input])
@@ -49,13 +53,12 @@ function App() {
         <input onChange={e=>setInput(e.target.value)} type="text" placeholder='Search for a Country' />
       </div>
       <div className="filter-bar">
-        <h1>Filter</h1>
       </div>
       </div>
       
       <FlagGrid countries={countries} output={output} isLoading={isLoading}/>
       </Route>
-      <Route path='/:name' component={FlagSingle} countries={countries} />
+      <Route path='/:name' component={FlagSingle}  />
       </Switch>
     </div>
     </Router>

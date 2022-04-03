@@ -4,7 +4,7 @@ import Spinner from './Spinner'
 
 function FlagGrid({countries, output, isLoading}) {
   return isLoading ? <Spinner/> :
-    <div className='flags'>
+    <div key={countries.index} className='flags'>
          {output.map((country) => (
             <FlagItem key={country.index} country={country}/>
         ))} 
