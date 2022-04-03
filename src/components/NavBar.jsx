@@ -4,7 +4,7 @@ function NavBar() {
   return (
     <div className='navbar'>
         <h1>Where in the World?</h1>
-        <a href="/">DarkMode</a>
+        <div className="dark"></div>
     </div>
   )
 }
